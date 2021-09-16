@@ -12,9 +12,15 @@
     <ClCompile Include="main.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="apt.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="apt.h">
       <Filter>Header</Filter>
     </ClInclude>
   </ItemGroup>

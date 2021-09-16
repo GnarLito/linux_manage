@@ -76,9 +76,11 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
+    <ClCompile Include="apt.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="apt.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
   <ItemDefinitionGroup />

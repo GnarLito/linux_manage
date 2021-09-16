@@ -12,5 +12,6 @@ std::vector<std::string> args;
 
 
 void load_args(int, char**);
+int install(std::string);
 
 #endif // !main_h_defs
