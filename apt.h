@@ -8,9 +8,11 @@
 class apt
 {
 public:
-	static int search(std::string);
-	static int locate(std::string);
+	static int search (std::string);
+	static int locate (std::string);
 	static int install(std::string);
+	static int remove (std::string);
+	static std::string run_command(std::string);
 };
 
 
