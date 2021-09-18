@@ -1,10 +1,11 @@
 #include "apt.h"
+#include <iostream>
 
 
 int apt::search(std::string name)
 {
     std::string result = apt::run_command("apt search " + name);
-    if (result.find(name) == -1)
+    if (result.find(name) == std::string::npos)
     {
         return 1;
     }
@@ -14,7 +15,7 @@ int apt::search(std::string name)
 int apt::locate(std::string name)
 {
     std::string result = apt::run_command("dpkg -L "+ name);
-    if (result.find("not installed") != -1) 
+    if (result.find("not installed") != std::string::npos)
     {
         return 2;
     }
@@ -24,7 +25,7 @@ int apt::locate(std::string name)
 int apt::install(std::string name)
 {
     std::string result = apt::run_command("sudo apt install -y "+ name);
-    if (result.find("E: Unable to locate package") != -1)
+    if (result.find("E: Unable to locate package") != std::string::npos)
     {
         return 3;
     }
@@ -33,8 +34,8 @@ int apt::install(std::string name)
 
 int apt::remove(std::string name)
 {
-    std::string result = apt::run_command("sudo apt remove -y" + name);
-    if (result.find("E: Unable to locate package") != -1)
+    std::string result = apt::run_command("sudo apt remove -y " + name);
+    if (result.find("E: Unable to locate package") != std::string::npos)
     {
         return 3;
     }

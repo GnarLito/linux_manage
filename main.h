@@ -15,14 +15,15 @@ std::vector<std::string> args;
 
 void load_args(int, char**);
 
-int install(std::string);
-int remove(std::string);
+int apt_install(std::string);
+int apt_remove(std::string);
 
 
 enum types
 {
-	install
-	, remove
+	install_arg,
+	remove_arg,
+	None_arg
 };
 types to_type(std::string);
 
